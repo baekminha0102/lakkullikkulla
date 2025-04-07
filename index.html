@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인서울대학 정시점수 마지노선</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-r from-purple-100 to-indigo-200 min-h-screen">
+    <div class="container py-5">
+        <div class="card shadow-lg mx-auto" style="max-width: 800px;">
+            <div class="card-body text-center p-5">
+                <h1 class="text-4xl font-bold text-indigo-600 mb-6">인서울대학 정시점수 마지노선</h1>
+                
+                <div class="search-section mb-6">
+                    <div class="row g-3">
+                        <div class="col-md-5">
+                            <div class="form-floating">
+                                <select id="universitySelect" class="form-select">
+                                    <option value="" selected disabled>대학을 선택하세요</option>
+                                    <option value="서울대학교">서울대학교</option>
+                                    <option value="연세대학교">연세대학교</option>
+                                    <option value="고려대학교">고려대학교</option>
+                                    <option value="서강대학교">서강대학교</option>
+                                    <option value="성균관대학교">성균관대학교</option>
+                                    <option value="이화여자대학교">이화여자대학교</option>
+                                    <option value="중앙대학교">중앙대학교</option>
+                                    <option value="한양대학교">한양대학교</option>
+                                    <option value="서울시립대학교">서울시립대학교</option>
+                                    <option value="건국대학교">건국대학교</option>
+                                </select>
+                                <label for="universitySelect">대학</label>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-floating">
+                                <select id="majorSelect" class="form-select">
+                                    <option value="" selected disabled>학과를 선택하세요</option>
+                                    <!-- 학과 옵션은 JavaScript에서 동적으로 추가됩니다 -->
+                                </option>
+                            </select>
+                            <label for="majorSelect">학과</label>
+                        </div>
+                        <div class="col-md-2">
+                            <button id="searchButton" class="btn btn-primary btn-lg w-100 h-100 rounded-3 shadow-md hover:shadow-lg transition-all duration-300">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="result-section">
+                    <h2 class="text-2xl font-semibold text-gray-700 mb-4">검색 결과</h2>
+                    <div id="result" class="result-box bg-white rounded-lg p-4 min-h-[200px] flex flex-col gap-3">
+                        <div class="text-center text-gray-500 py-8">
+                            <i class="fas fa-university text-5xl mb-3"></i>
+                            <p>대학과 학과를 선택하고 검색 버튼을 클릭하세요</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
